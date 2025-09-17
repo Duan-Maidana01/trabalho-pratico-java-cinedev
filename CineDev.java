@@ -60,4 +60,21 @@ public class CineDev {
         System.out.print("Escolha uma opção: ");
     }
 }
-    
+
+    // Exibe o mapa da sala com os assentos
+    public static void exibirMapa() {
+        System.out.println("\nAssentos: ");
+        System.out.print("         ");
+        for (int j = 0; j < 20; j++) {
+            System.out.printf("%2d ", j + 1);
+        }
+        System.out.println();
+
+        for (int i = 0; i < salaDeCinema.length; i++) {
+            System.out.printf("Fileira %2d: ", i + 1);
+            for (int j = 0; j < salaDeCinema[i].length; j++) {
+                System.out.print("[" + salaDeCinema[i][j] + "]");
+        }
+            System.out.println();
+    }
+}
