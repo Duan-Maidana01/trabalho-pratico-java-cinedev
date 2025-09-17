@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class CineDev {
 
     // Matriz que representa a sala de cinema
@@ -37,9 +39,8 @@ public class CineDev {
 
         scanner.close();
     }
-}
 
-// Inicializa todos os assentos como livres "L"
+    // Inicializa todos os assentos como livres "L"
     public static void inicializarSala() {
         for (int i = 0; i < salaDeCinema.length; i++) {
             for (int j = 0; j < salaDeCinema[i].length; j++) {
@@ -48,4 +49,15 @@ public class CineDev {
         }
     }
 
-
+    // Exibe o menu principal
+    public static void exibirMenu() {
+        System.out.println("===== Menu Principal =====");
+        System.out.println("1. Exibir Mapa de Assentos");
+        System.out.println("2. Comprar Ingresso");
+        System.out.println("3. Cancelar Compra de Ingresso");
+        System.out.println("4. Exibir Relatório de Ocupação");
+        System.out.println("5. Sair");
+        System.out.print("Escolha uma opção: ");
+    }
+}
+    
