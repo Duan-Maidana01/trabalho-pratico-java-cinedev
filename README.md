@@ -15,6 +15,7 @@ Matrícula: 467876
 Descrição: Este sistema foi pensado e criado para gerenciar uma sala de cinema, com compra de ingressos, exibir mapa de assentos, cancelar ingresso e exibir relatório.
 
 
+Para compilar e executar, utilize o Prompt de Comando (CMD)
 
 Como compilar:
 javac *nomeDoArquivo*.java
