@@ -51,7 +51,7 @@ public class CineDev {
 
     // Exibe o menu principal
     public static void exibirMenu() {
-        System.out.println("\n===== Menu Principal =====");
+        System.out.println("===== Menu Principal =====");
         System.out.println("1. Exibir Mapa de Assentos");
         System.out.println("2. Comprar Ingresso");
         System.out.println("3. Cancelar Compra de Ingresso");
@@ -62,7 +62,7 @@ public class CineDev {
 
     // Exibe o mapa da sala com os assentos
     public static void exibirMapa() {
-        System.out.println("\nAssentos: ");
+        System.out.println("Assentos: ");
         System.out.print("         ");
         for (int j = 0; j < salaDeCinema[0].length; j++) {
             System.out.printf("%2d ", j + 1);
@@ -80,7 +80,7 @@ public class CineDev {
 
     // Lógica para comprar um ingresso
     public static void comprarIngresso(Scanner scanner) {
-        System.out.print("\nDigite o número da fileira (1-10): ");
+        System.out.print("Digite o número da fileira (1-10): ");
         int fileira = scanner.nextInt();
         System.out.print("Digite o número do assento (1-20): ");
         int assento = scanner.nextInt();
@@ -143,7 +143,11 @@ public class CineDev {
         System.out.println("Total de Assentos: " + total);
         System.out.println("Assentos Ocupados: " + ocupados);
         System.out.println("Assentos Livres: " + livres);
-        System.out.printf("Percentual de Ocupação: %.2f%%\n", percentual);
+        System.out.printf("Percentual de Ocupação: %.2f%%", percentual);
+    }
+
+    // Valida se a posição está dentro dos limites da sala
+    public static boolean validarPosicao(int fileira, int assento) {
+        return fileira >= 1 && fileira <= 10 && assento >= 1 && assento <= 20;
     }
 }
-    
