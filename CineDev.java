@@ -108,6 +108,8 @@ public class CineDev {
         int assento = scanner.nextInt();
 
         if (validarPosicao(fileira, assento)) {
+            System.out.println("Posição inválida! Digite fileira entre 1-10 e assento entre 1-20.");
+        } else {
             int f = fileira - 1;
             int a = assento - 1;
 
@@ -115,11 +117,33 @@ public class CineDev {
                 salaDeCinema[f][a] = 'L';
                 System.out.println("Compra cancelada com sucesso!");
             } else {
-                System.out.println(" Esse assento já está livre.");
+                System.out.println("Esse assento já está livre.");
             }
-        } else {
-            System.out.println(" Posição inválida! Digite fileira entre 1-10 e assento entre 1-20.");
         }
     }
 
+    // Exibe o relatório de ocupação da sala
+    public static void exibirRelatorio() {
+        int total = 0;
+        int ocupados = 0;
+
+        for (int i = 0; i < salaDeCinema.length; i++) {
+            for (int j = 0; j < salaDeCinema[i].length; j++) {
+                total++;
+                if (salaDeCinema[i][j] == 'X') {
+                    ocupados++;
+                }
+            }
+        }
+
+        int livres = total - ocupados;
+        double percentual = (ocupados * 100.0) / total;
+
+        System.out.println("\n===== Relatório de Ocupação =====");
+        System.out.println("Total de Assentos: " + total);
+        System.out.println("Assentos Ocupados: " + ocupados);
+        System.out.println("Assentos Livres: " + livres);
+        System.out.printf("Percentual de Ocupação: %.2f%%\n", percentual);
+    }
+}
     
